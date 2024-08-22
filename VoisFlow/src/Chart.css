@@ -1,0 +1,40 @@
+body #root > div {
+    background-color: rgb(59, 48, 48);
+    background-image: -webkit-repeating-radial-gradient(top center, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2) 1px, transparent 0, transparent 100%);
+  }
+  
+  /* Styles for edges */
+  .edge {
+    stroke: #b1b1b7;
+    stroke-dasharray: 5;
+    animation: dashdraw .5s linear infinite;
+    stroke-width: 1;
+  }
+  
+  /* Animation for dashed edges */
+  @keyframes dashdraw {
+    0% {
+      stroke-dashoffset: 10;
+    }
+  }
+  
+  /* Additional node, port, and edge styles */
+  .node {
+    stroke: #1a192b !important;
+    fill: white !important;
+    stroke-width: 1 !important;
+    opacity: 0.3;
+  }
+  
+  .node-label {
+    fill: black;
+  }
+  
+  .port {
+    fill: blue;
+    stroke: white;
+  }
+  
+  .marker-arrow {
+    fill: #b1b1b7;
+  }
