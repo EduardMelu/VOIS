@@ -45,9 +45,12 @@ const nodes = (graphData as GraphData).nodes.map((node) => {
     layoutOptions: node.parent
       ? {
           'elk.algorithm': 'rectpacking',
+          'org.eclipse.elk.hierarchyHandling': 'INCLUDE_CHILDREN',
         }
       : {
           'elk.algorithm': 'radial',
+          'org.eclipse.elk.hierarchyHandling': 'INCLUDE_CHILDREN',
+          'elk.radial.nodePlacement.strategy': 'BREADTH_FIRST',
         },
   };
 });
@@ -129,10 +132,11 @@ const GraphComponent: React.FC = () => {
             'elk.algorithm': 'radial',
             'elk.hierarchyHandling': 'INCLUDE_CHILDREN',
             'elk.direction': 'RIGHT',
+            '	org.eclipse.elk.radial.centerOnRoot': 'true',
             'elk.layered.feedbackEdges': 'true',
             'elk.radial.center': '1',
-            'org.eclipse.elk.hierarchyHandling': 'INCLUDE_CHILDREN',
             'elk.nodeLabels.placement': 'INSIDE V_TOP H_RIGHT',
+            'org.eclipse.elk.hierarchyHandling': 'INCLUDE_CHILDREN',
           }}
         />
       </div>
@@ -146,7 +150,7 @@ const GraphComponent: React.FC = () => {
         className="side-panel"
       >
         {selectedNode ? (
-          <div>
+          <div className="information">
             <h2>Node Information</h2>
             <p>
               <strong>ID:</strong> {selectedNode.id}
@@ -157,7 +161,7 @@ const GraphComponent: React.FC = () => {
             {/* Add more details as needed */}
           </div>
         ) : (
-          <p>Select a node to see details</p>
+          <p className="node-details">Select a node to see details</p>
         )}
       </div>
     </div>

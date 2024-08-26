@@ -1,40 +1,116 @@
-body #root > div {
-    background-color: rgb(59, 48, 48);
-    background-image: -webkit-repeating-radial-gradient(top center, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2) 1px, transparent 0, transparent 100%);
-  }
-  
-  /* Styles for edges */
-  .edge {
-    stroke: #b1b1b7;
-    stroke-dasharray: 5;
-    animation: dashdraw .5s linear infinite;
-    stroke-width: 1;
-  }
-  
-  /* Animation for dashed edges */
-  @keyframes dashdraw {
-    0% {
-      stroke-dashoffset: 10;
-    }
-  }
-  
-  /* Additional node, port, and edge styles */
-  .node {
-    stroke: #1a192b !important;
-    fill: white !important;
-    stroke-width: 1 !important;
-    opacity: 0.3;
-  }
-  
-  .node-label {
-    fill: black;
-  }
-  
-  .port {
-    fill: blue;
-    stroke: white;
-  }
-  
-  .marker-arrow {
-    fill: #b1b1b7;
-  }
+#root > div {
+  background-color: #fff5f5; /* Very light red background */
+  background-image: 
+    linear-gradient(rgba(255,0,0,.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,0,0,.05) 1px, transparent 1px);
+  background-size: 50px 50px; /* Subtle, larger grid effect */
+}
+
+.edge {
+  stroke: #dc2626 !important; /* Vibrant red for edges */
+  stroke-dasharray: 5 3 !important;
+  stroke-width: 2 !important;
+  animation: dashdraw 15s linear infinite;
+  filter: drop-shadow(0 0 3px rgba(220, 38, 38, 0.5)) !important;
+}
+
+@keyframes dashdraw {
+  to { stroke-dashoffset: 100; }
+}
+
+.node {
+  stroke: #b91c1c;
+  fill: #ffffff !important;
+  stroke-width: 2;
+  opacity: 1;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  background: linear-gradient(135deg, #ffffff, #fee2e2);
+  transform-origin: center;
+  transition: all 0.3s ease;
+}
+
+.node:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
+  transform: translateY(-2px);
+  border: 2px solid #dc2626;
+}
+
+.node::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #dc2626, #b91c1c, #7f1d1d);
+  z-index: -1;
+  filter: blur(5px);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 6px;
+}
+
+.node:hover::before {
+  opacity: 0.7;
+}
+
+.node-label {
+  fill: #7f1d1d;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.port {
+  fill: #dc2626;
+  stroke: #ffffff;
+  stroke-width: 1.5;
+}
+
+.marker-arrow {
+  fill: #b91c1c;
+}
+
+.information {
+  color: #7f1d1d;
+  font-size: 1.1em;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.node-details {
+  background-color: #ffffff;
+  color: #7f1d1d;
+  border-radius: 4px;
+  padding: 1.2em;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #dc2626;
+  transition: all 0.3s ease;
+}
+
+.node-details:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
+  transform: translateY(-2px);
+}
+
+.node[class*="_active"] {
+  stroke: #dc2626 !important; /* Vibrant red stroke */
+  stroke-width: 3px !important; /* Slightly thicker stroke for emphasis */
+}
+
+
+
+.light-blue {
+  fill:#e6f2ff !important;
+  stroke: #b3d9ff !important;
+}
+
+.light-blue-child{
+  fill:#e6f2ff !important;
+  stroke: #8a2be2 !important;
+}
+
+.light-red{
+  fill: #ffebee !important;
+  stroke: #dc143c !important;
+}

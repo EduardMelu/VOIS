@@ -1,13 +1,18 @@
 {
   "nodes": [
-    { "id": "1", "text": "OSB" },
+    { "id": "1", "text": "OSB", "className": "light-blue" },
     {
       "id": "2",
       "text": "Core",
       "data": "LOrem IpsumLOrem IpsumLOrem IpsumLOrem IpsumLOrem IpsumLOrem IpsumLOrem IpsumLOrem IpsumLOrem IpsumLOrem IpsumLOrem IpsumLOrem IpsumLOrem IpsumLOrem IpsumLOrem IpsumLOrem Ipsum ",
       "parent": "1"
     },
-    { "id": "3", "text": "CRM", "parent": "2" },
+    {
+      "id": "3",
+      "text": "CRM",
+      "parent": "2",
+      "className": "light-blue-child"
+    },
     { "id": "4", "text": "CRM2", "parent": "2" },
     { "id": "5", "text": "CRM3", "parent": "2" },
     { "id": "6", "text": "CRM4", "parent": "2" },
@@ -23,7 +28,7 @@
     { "id": "16", "text": "CRM14", "parent": "2" },
     { "id": "17", "text": "CRM15", "parent": "2" },
     { "id": "18", "text": "CRM15" },
-    { "id": "19", "text": "CRM15" },
+    { "id": "19", "text": "CRM15", "className": "light-red" },
     { "id": "20", "text": "CRM" },
     { "id": "21", "text": "ssss" }
   ],

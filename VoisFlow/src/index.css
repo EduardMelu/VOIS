@@ -1,11 +1,11 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #fdfdfd;
+  color: rgba(34, 40, 49, 0.87);
+  background-color: #f0f0f5;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -15,11 +15,11 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #1d4ed8; /* Bright blue */
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  color: #1e40af; /* Darker blue */
 }
 
 body {
@@ -28,11 +28,13 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-color: #e5e7eb; /* Light gray background for better contrast */
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-size: 3em;
+  line-height: 1.2;
+  color: #111827; /* Darker shade for headings */
 }
 
 button {
@@ -42,12 +44,14 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #2563eb; /* Modern blue */
+  color: white;
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: background-color 0.25s, border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  background-color: #1d4ed8;
+  border-color: #3b82f6; /* Slightly lighter blue border on hover */
 }
 button:focus,
 button:focus-visible {
@@ -56,13 +60,18 @@ button:focus-visible {
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
+    color: #111827; /* Darker gray for better readability */
     background-color: #ffffff;
   }
   a:hover {
-    color: #747bff;
+    color: #3b82f6; /* Lighter hover effect for links in light mode */
   }
   button {
-    background-color: #f9f9f9;
+    background-color: #f3f4f6; /* Light gray background for buttons */
+    color: #1d4ed8; /* Modern blue text for buttons */
+  }
+  button:hover {
+    background-color: #e5e7eb; /* Slightly darker gray on hover */
+    border-color: #60a5fa; /* Light blue border on hover */
   }
 }
