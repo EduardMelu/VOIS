@@ -115,9 +115,12 @@ const GraphComponent: React.FC = () => {
           node={(node: NodeProps) => (
             <Node
               {...node}
+              rx={20}
+              ry={20}
               onClick={onLocalClick}
               onKeyDown={onKeyDown}
               className="node"
+              selectable={true}
               linkable={false}
               label={
                 <Label

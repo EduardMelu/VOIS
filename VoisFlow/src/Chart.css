@@ -76,6 +76,17 @@
   font-size: 1.1em;
   font-weight: 500;
   letter-spacing: 0.5px;
+
+  background-color: #ffffff;
+  border-radius: 4px;
+  padding: 1.2em;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #dc2626;
+  transition: all 0.3s ease;
+
+  min-height: 70vh;
+  height: max-content;
+  max-height: 80vh;
 }
 
 .node-details {
@@ -113,4 +124,8 @@
 .light-red{
   fill: #ffebee !important;
   stroke: #dc143c !important;
+}
+
+._container_nxq8k_6 {
+   opacity: 0;
 }
